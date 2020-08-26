@@ -33,7 +33,6 @@
             this.MenuStrip = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.StockManager = new System.Windows.Forms.ToolStripMenuItem();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.ltView = new System.Windows.Forms.ListView();
             this.cCode = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -41,7 +40,6 @@
             this.cDiffPercent = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.cDiffPrice = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.MenuStrip.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.SuspendLayout();
             // 
             // MenuStrip
@@ -64,21 +62,6 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // trackBar1
-            // 
-            this.trackBar1.AutoSize = false;
-            this.trackBar1.ContextMenuStrip = this.MenuStrip;
-            this.trackBar1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.trackBar1.Location = new System.Drawing.Point(312, 0);
-            this.trackBar1.Maximum = 100;
-            this.trackBar1.Name = "trackBar1";
-            this.trackBar1.Orientation = System.Windows.Forms.Orientation.Vertical;
-            this.trackBar1.Size = new System.Drawing.Size(21, 119);
-            this.trackBar1.TabIndex = 3;
-            this.trackBar1.Value = 50;
-            this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
-            this.trackBar1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ESCKeyDown_AppExit);
-            // 
             // ltView
             // 
             this.ltView.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -97,7 +80,7 @@
             this.ltView.MultiSelect = false;
             this.ltView.Name = "ltView";
             this.ltView.ShowGroups = false;
-            this.ltView.Size = new System.Drawing.Size(312, 119);
+            this.ltView.Size = new System.Drawing.Size(333, 119);
             this.ltView.TabIndex = 5;
             this.ltView.UseCompatibleStateImageBehavior = false;
             this.ltView.View = System.Windows.Forms.View.Details;
@@ -131,7 +114,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(333, 119);
             this.Controls.Add(this.ltView);
-            this.Controls.Add(this.trackBar1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
             this.MinimizeBox = false;
@@ -140,7 +122,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ESCKeyDown_AppExit);
             this.MenuStrip.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -148,7 +129,6 @@
         #endregion
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.ContextMenuStrip MenuStrip;
-        private System.Windows.Forms.TrackBar trackBar1;
         private System.Windows.Forms.ListView ltView;
         private System.Windows.Forms.ColumnHeader cCode;
         private System.Windows.Forms.ColumnHeader cName;

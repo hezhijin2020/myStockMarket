@@ -48,23 +48,25 @@ namespace HZJ.StockMarket
         /// </summary>
         private void ltView_MouseWheel(object sender, MouseEventArgs e)
         {
-            ltView.Focus();
-            ChangeOpacity(e.Delta);
+            if (e.Delta > 0)
+            {
+                ChangeOpacity(0.05);
+            }
+            else
+            {
+                ChangeOpacity(-0.05);
+            }
+            
         }
 
-        /// <summary>
-        /// 拖动进度条显示窗体的透明度
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        private void trackBar1_Scroll(object sender, System.EventArgs e)
+        public void ChangeOpacity(double Num=0.05)
         {
-            //this.Opacity = double.Parse(trackBar1.Value.ToString()) / 100;
-        }
-
-        public void ChangeOpacity(int Num)
-        {
-            this.Opacity = this.Opacity + Num;
+            double OpNum = this.Opacity + Num;
+            if (OpNum>=1||OpNum<=0)
+            {
+                return;
+            }
+            this.Opacity = OpNum;
         }
 
         #endregion
@@ -166,6 +168,32 @@ namespace HZJ.StockMarket
             if (e.KeyCode == Keys.Escape)
             {
                 Application.Exit();
+            }
+            else if (e.KeyCode == Keys.Up)
+            {
+                ChangeOpacity();
+                e.Handled = true;
+            }
+            else if (e.KeyCode == Keys.Down)
+            {
+                ChangeOpacity(-0.05);
+                e.Handled = true;
+            }
+            else if (e.KeyCode == Keys.F1)
+            {
+                this.Opacity = 0.2;
+            }
+            else if (e.KeyCode == Keys.F2)
+            {
+                this.Opacity = 0.4;
+            }
+            else if (e.KeyCode == Keys.F3)
+            {
+                this.Opacity = 0.5;
+            }
+            else if (e.KeyCode == Keys.F4)
+            {
+                this.Opacity = 0.6;
             }
         }
         #endregion
