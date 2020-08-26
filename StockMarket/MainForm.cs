@@ -181,15 +181,15 @@ namespace HZJ.StockMarket
             }
             else if (e.KeyCode == Keys.F1)
             {
-                this.Opacity = 0.2;
+                this.Opacity = 0.05;
             }
             else if (e.KeyCode == Keys.F2)
             {
-                this.Opacity = 0.4;
+                this.Opacity = 0.2;
             }
             else if (e.KeyCode == Keys.F3)
             {
-                this.Opacity = 0.5;
+                this.Opacity = 0.4;
             }
             else if (e.KeyCode == Keys.F4)
             {

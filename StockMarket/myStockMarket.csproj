@@ -51,7 +51,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppSeting.cs" />
-    <Compile Include="StockData.cs" />
     <Compile Include="StockManagerForm.cs">
       <SubType>Form</SubType>
     </Compile>
